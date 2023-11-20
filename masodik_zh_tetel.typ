@@ -72,7 +72,7 @@ $ exists D in KK^(n times n): A^T D eq I $
 
 Az egyenlőség mindkét oldalát transzponáljuk:
 
-$ (A^T D^T) eq I^T $
+$ (A^T D)^T eq I^T $
 
 ahonnan $D^T A eq I$ kövevtkezik. Ennek segítségével igazolhatjuk a $C A eq I$ egyenlőséget:
 
