@@ -26,19 +26,12 @@ jobs:
       - name: Get current date
         id: date
         run: echo "DATE=$(date +%Y-%m-%d-%H:%M)" >> $GITHUB_ENV
-      - name: Tag the repository
-        id: tag
-        run: |
-          # See https://docs.github.com/en/get-started/using-git/dealing-with-special-characters-in-branch-and-tag-names
-          TAG=v$(date -Iseconds | sed 's/[T:\+]/-/g')
-          echo "$TAG"
-          echo "tag=$TAG" >> $GITHUB_OUTPUT
-          git tag -a $TAG -m "Published version $TAG" ${GITHUB_SHA}
-          git push origin $TAG
-      - name: Release
-        uses: softprops/action-gh-release@v1
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        name: Release
         with:
-          name: "${{ github.ref_name }} — ${{ env.DATE }}"
-          tag_name: ${{ steps.tag.outputs.tag }}
-          files: "*.pdf"
-          token: ${{ secrets.PAT }}
+          repo_token: "${{ secrets.PAT }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: "Bugfix"
+          files: |
+            "*.pdf"
