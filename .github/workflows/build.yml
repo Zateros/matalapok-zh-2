@@ -32,3 +32,4 @@ jobs:
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
           files: "*.pdf"
+          token: ${{ secrets.PAT }}
