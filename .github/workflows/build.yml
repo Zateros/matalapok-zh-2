@@ -34,4 +34,5 @@ jobs:
           prerelease: false
           title: "Bugfix"
           files: |
-            "*.pdf"
+            masodik_zh_def.pdf
+            masodik_zh_tetel.pdf
