@@ -206,8 +206,8 @@ Mivel $-1 eq.not 0$, ezér a rendszer valóban összefüggő.
 == 16.10. Független rendszer bővítése
 
 Legyen $x_1,...,x_k in V$ egy lineárisan független rendszer, továbbá legyen $x in V$. Ekkor
-$ "a)" x in "Span" (x_1,...,x_k) arrow.double x_1,...,x_k "lineárisan összefüggő" \ 
- "b)" x in.not "Span" (x_1,...,x_k) arrow.double x_1,...,x_k "lineárisan független" $
+$ "a)" x in "Span" (x_1,...,x_k) arrow.double x_1,...,x_k, x "lineárisan összefüggő" \ 
+ "b)" x in.not "Span" (x_1,...,x_k) arrow.double x_1,...,x_k, x "lineárisan független" $
 
 == 16.11. Következmény
 Legyen $x_1,...,x_k, x in V$. Ha $x_1,...,x_k$ lineárisan független és $x_1,...,x_k, x$ lineárisan összefüggő, akkor
